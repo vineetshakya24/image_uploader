@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>uploadform</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Oxygen", sans-serif;
+      }
+      body {
+        background-image: linear-gradient(
+            rgba(241, 241, 243, 0.3),
+            rgba(252, 251, 250, 0.3)
+          ),
+          url("boatbackground.jpg");
+        background-size: cover;
+      }
+      .formbox {
+        background-color: rgb(114, 112, 112, 0.5);
+        height: 400px;
+        width: 400px;
+        margin-left: 35%;
+        margin-top: 100px;
+      }
+      .formbox span {
+        margin-left: 25%;
+        color: white;
+        font-size: 40px;
+      }
+      hr {
+        margin-left: 10px;
+      }
+      .formbox .a1 {
+        margin-left: 5%;
+      }
+      .formbox .a1 .b2 {
+        width: 150px;
+        display: inline-block;
+        font-weight: bold;
+        color: rgb(250, 248, 252);
+      }
+      .formbox .a1 .c3 {
+        width: 200px;
+        display: inline-block;
+      }
+      button {
+        background-color: blueviolet;
+        color: white;
+        width: 200px;
+        height: 30px;
+        margin-left: 23%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav></nav>
+      <div class="formbox">
+        <span>File Upload</span>
+        <a href="dwnldform.php">show data</a>
+        <br />
+        <hr size="3" width="90%" color=" rgb(144, 20, 216" />
+        <br />
+
+        <form
+          action="uploadform.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="a1">
+            <div class="b2">
+              <label for="uname">USERNAME</label>
+            </div>
+            <div class="c3">
+              <input
+                type="text"
+                placeholder="Enter your username..."
+                id="uname"
+                name="uname"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="a1">
+            <div class="b2">
+              <label for="password">PASSWORD</label>
+            </div>
+            <div class="c3">
+              <input
+                type="password"
+                placeholder="Enter your password..."
+                id="password"
+                name="password"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="a1">
+            <div class="b2">
+              <label for="sign">SIGNATURE</label>
+            </div>
+            <div class="c3">
+              <input type="file" id="sign" name="sign" />
+            </div>
+          </div>
+          <br />
+          <div class="a1">
+            <div class="b2">
+              <label for="print">RIGHT THUMB PRINT</label>
+            </div>
+            <div class="c3">
+              <input type="file" id="print" name="print" />
+            </div>
+          </div>
+          <br />
+          <hr size="3" width="90%" color=" rgb(144, 20, 216" />
+          <br />
+          <button type="submit">Register</button>
+          <button
+            style="
+              background-color: skyblue;
+              height: 35px;
+              width: 250px;
+              border-width: 0px;
+            "
+          >
+            <i class="fa fa-facebook-square"></i> login with facebook
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

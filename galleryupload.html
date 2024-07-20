@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <link rel="icon" href="logo.png" />
+        
+        <title>Gallery_Upload</title>
+        <style>
+            *
+            {
+                margin:0;
+                padding:0;
+                font-family: 'Kanit', sans-serif;
+            }
+            .headerpart
+            {
+                background-image: linear-gradient(rgba(252, 249, 249, 0.1),rgba(252, 250, 250, 0.2)),url("gallerybackground.jpg");
+                background-size: cover;
+                width:100%;
+                height:110vh;
+            }
+            .headerpart .topbar
+            {
+                width:100%;
+                height:30px;
+                background-color: brown;
+            }
+            .headerpart .topbar .left
+            {
+                margin-left:20%;
+                list-style: none;
+            }
+            .headerpart .topbar .left li
+            {
+                color:white;
+                display: inline-block;
+                font-size: 20px;
+                margin-left: 3%;
+            }
+            .headerpart .topbar .right
+            {
+                float:right;
+                margin-right: 4%;
+                color:white;
+                font-size: 20px;
+                position: relative;
+                top: -30px;
+            }
+            .headerpart .topbar .right button
+            {
+                background-color: brown;
+                border-color: white;
+                border-radius: 9px;
+                height:25px;
+                width:70px;
+                position: relative;
+                top:-4px;
+            }
+            .headerpart .topbar .right button a
+            {
+                text-decoration: none;
+                color:white;
+            }
+            .headerpart .header 
+            {
+                width:100%;
+                height: 90px;
+                transition:0.5s;
+            }
+            .headerpart .header:hover
+            {
+                background-color: white;
+            }
+            .headerpart .header img
+            {
+                width:100px;
+                margin-left: 3%;
+            }
+            .headerpart .header .logoname
+            {
+                color:aqua;
+                font-size: 60px;
+                font-weight: bold;
+                position: relative;
+                top: -20px;
+                transition: 0.5s;
+            }
+            .headerpart .header:hover .logoname
+            {
+                color:rgb(90, 90, 245);
+            }
+            .headerpart .header ul
+            {
+                float: right;
+                width:1000px;
+                list-style: none;
+                position:relative;
+                top: -90px; 
+                right:-70px;   
+            }
+            .headerpart .header ul li
+            {
+                display: inline-block;
+                margin-right: 5%;
+            }
+            .headerpart .header ul li button
+            {
+                height:30px;
+                width:100px;
+                border-color: white;
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255, 0.0);
+                transition:0.5;
+            }
+            .headerpart .header:hover ul li button
+            {
+                border-color: black;
+            }
+            .headerpart .header ul li button a
+            {
+                text-decoration: none;
+                color:white;
+                font-size: 20px;
+                transition:0.5;
+            }
+            .headerpart .header:hover ul li button a
+            {
+                color:black;
+            }
+            .headerpart .header ul li a
+            {
+                text-decoration: none;
+                color:white;
+                font-size: 25px;
+                transition:0.5s;
+            }
+            .headerpart .header:hover ul li a
+            {
+                color:black;
+            }
+            .headerpart .formbox
+            {
+                background-color: rgba(0, 0, 0, 0.4);
+                height:600px;
+                width:1200px;
+                margin-top: 30px;
+                margin-left: 10%;
+            }
+            .headerpart .formbox .heading
+            {
+                margin-left: 33%;
+                color:white;
+                font-size: 50px;
+            }
+            .headerpart .formbox form
+            {
+                margin-left:30px;
+                padding-top: 40px;
+            }
+            .headerpart .formbox form .imagebox
+            {
+                
+                width:600px;
+                color:white;
+                font-size: 30px;
+                padding-left: 30%;
+                margin-top: 80px;
+            }
+            hr
+            {
+                margin-left: 60px;
+                position: relative;
+                top:160px;
+            }
+
+
+            .footer
+            {
+                background-color: rgb(3, 3, 3, 0.8);
+                width:100%;
+                height:150px;
+                transition:0.5s;
+            }
+            .footer:hover
+            {
+                background-color:black;
+            }
+            .footer .icons
+            {
+                margin-left: 25%;
+                padding-top: 40px;
+                
+            }
+            .footer .icons li
+            {
+                color:white;
+                font-size: 50px;
+                display: inline-block;
+                margin-left:7%;
+                transition:0.5s;
+            }
+            .footer .icons li:hover
+            {
+                color:blueviolet;
+            }
+            .footer span
+            {
+                color:white;
+                float: right;
+                margin-right:10px;
+                transition: 0.5s;
+            }
+            .footer:hover span
+            {
+                color:aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="headerpart">
+            
+            <nav>
+                <div class="topbar">
+                    <ul class="left">
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-youtube"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </ul>
+                    <span class="right"><button><a href="gallerylogin.html">LOG-IN<i class="fa fa-right-to-bracket"></i></a></button></span>
+                    <span class="right"><i class="fa fa-phone"></i> :+91-1234567890</span>
+                    <span class="right"><i class="fa fa-envelope"></i> :abc1234@gmail.com</span> 
+                     
+                </div>
+
+                <div class="header">
+                        <span><img src="logo.png"></span>
+                        <span class="logoname">GALLERY</span>
+                    <ul>
+                        <li><a href="Gallery.html">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="galleryupload.html">UPLOAD</a></li>
+                        <li><a href="gallerydwnld.php">GALLERY</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><button><a href="gallerysignup.html">SIGN-IN</a></button></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="formbox">
+                <span class="heading">Select Pictures</span>
+                <form action="galleryupload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" class="imagebox" accept=".jpg, .png, .jpeg" name="image1"><br>
+
+
+                    <br><hr color="white" size="3" width="90%"><br>
+
+                    <br><input type="submit" value="CREATE" style="height:40px;width:300px;background-color:rgb(206, 68, 68);color:white;border-width: 0px;margin-left:35%;font-size: 20px;position:relative;top:160px; ">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <ul class="icons">
+                <li><i class="fa fa-instagram"></i></li>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-youtube"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-linkedin"></i></li>
+            </ul>
+            <span> ©copyright 2022</span>
+            <span>Terms and Policy</span>
+        </div>
+    </body>
+</html>
